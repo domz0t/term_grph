@@ -15,15 +15,15 @@ BUTTERFLY_OBJS = $(BUTTERFLY_SRCS:.cpp=.o)
 RUNE_OBJS = $(RUNE_SRCS:.cpp=.o)
 
 # Цели по умолчанию (собирает все три программы)
-all: cube buttefly rune
+all: cube butterfly rune
 
 # Правило для компиляции программы из cube.cpp
 cube: $(CUBE_OBJS)
 	$(CXX) $(CXXFLAGS) -o cube $(CUBE_OBJS)
 
 # Правило для компиляции программы из buttefly.cpp
-buttefly: $(BUTTERFLY_OBJS)
-	$(CXX) $(CXXFLAGS) -o buttefly $(BUTTERFLY_OBJS)
+butterfly: $(BUTTERFLY_OBJS)
+	$(CXX) $(CXXFLAGS) -o butterfly $(BUTTERFLY_OBJS)
 
 # Правило для компиляции программы из rune.cpp
 rune: $(RUNE_OBJS)
