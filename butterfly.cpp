@@ -163,8 +163,8 @@ int main()
                     double y = obj_y_center + j;
                     double z = obj_z_center + k;
                     double temp = i*i + j*j + k*k + major_radius*major_radius - minor_radius*minor_radius;
-                    if(temp*temp <= 4*major_radius*major_radius*(i*i + j*j) && mode == 1 ||
-                       temp*temp == 4*major_radius*major_radius*(i*i + j*j) && mode == -1)
+                    if((temp*temp <= 4*major_radius*major_radius*(i*i + j*j) && mode == 1) ||
+                       (temp*temp == 4*major_radius*major_radius*(i*i + j*j) && mode == -1))
                     {
                         //for fun: hard to draw on paper
                         // for(int w = 0; w < 3; w++)
